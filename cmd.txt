@@ -35,3 +35,4 @@
   442  git config --global user.name ahidsang
   443  git config --global user.email seojy1009@gmail.com
   447  git push
+    git pull
