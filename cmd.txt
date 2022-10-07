@@ -1,0 +1,37 @@
+ 410  git clone https://github.com/ahidsang/netauto.git
+  411  ls
+  412  ls netauto/
+  413  cat netauto/README.md
+  414  clear4
+  415  clear
+  416  vi netauto/README.md
+  417  cd netauto/
+  418  ls -a
+  419  ls .git/
+  420  clear
+  421  touch bek.txt
+  424  code bek.txt
+  426  git status
+  427  git add bek.txt
+  428  git status
+  429  git commit -m '백 모씨 새로운 앨범 출시
+그런데 곡이 2개뿐임 게다가 그2곡이 같은곡 다른버전인듯'
+  430  git log
+  431  git status
+  433  git add README.md
+  435  git status
+  410  git clone https://github.com/ahidsang/netauto.git
+  421  touch bek.txt
+  424  code bek.txt
+  426  git status
+  427  git add bek.txt
+  428  git status
+  429  git commit -m '백 모씨 새로운 앨범 출시
+그런데 곡이 2개뿐임 게다가 그2곡이 같은곡 다른버전인듯'
+  430  git log
+  431  git status
+  433  git add README.md
+  435  git status
+  442  git config --global user.name ahidsang
+  443  git config --global user.email seojy1009@gmail.com
+  447  git push
