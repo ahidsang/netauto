@@ -12,14 +12,14 @@ def printlog(logfile, search_word, start_index, pre_rowcount, next_rowcount):
     # 코드 수정 완료
 
     if index >= 0 :
-        print "-" * 70
-        print "Log file : ", logfile
-        print "Find this word : ", search_word
-        print "-" * 70
+        print ("-" * 70)
+        print ("Log file : ", logfile)
+        print ("Find this word : ", search_word)
+        print ("-" * 70)
 
         (data, count) = get_log_data(logdata, search_word, index, pre_rowcount, next_rowcount)
-        print data
-        print "추출한 로그 개수 :", count
+        print (data)
+        print ("추출한 로그 개수 :", count)
 
 def get_log_data(logdata, search_word, start_index, pre_rowcount, next_rowcount) :
     count = 0

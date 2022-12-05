@@ -14,11 +14,11 @@ errcolor_except = '\x1b[36m'
 
 def check(file_name, search_word) :
     if os.path.exists(file_name):
-        print "모니터링 시작 :", file_name
-        print "대상 : ", search_word
-        print "-" * 70
+        print ("모니터링 시작 :", file_name)
+        print ("대상 : ", search_word)
+        print ("-" * 70)
     else :
-        print "찾으려는 파일이 없습니다 :", file_name
+        print ("찾으려는 파일이 없습니다 :", file_name)
         
     index = 0
     while os.path.exists(file_name) :
@@ -30,7 +30,7 @@ def check(file_name, search_word) :
         if index >= 0 :
             alert(search_word)    # 코드 수정
             (data, count) = get_log_data(file_data, search_word, index, 2, 2)
-            print data
+            print (data)
         else :
             sys.stdout.write("...")
             sys.stdout.flush()
@@ -42,9 +42,9 @@ def check(file_name, search_word) :
 def alert(search_word) :
     now = datetime.datetime.now()
     if search_word == "FATAL" :
-        print errcolor_fatal + "\n", now, "심각한 문제가 발생했습니다!!" +errcolor_none
+        print (errcolor_fatal + "\n", now, "심각한 문제가 발생했습니다!!" +errcolor_none)
     elif search_word == "except" :
-        print errcolor_except + "\n", now, "문제가 발견됐습니다!!" +errcolor_none
+        print (errcolor_except + "\n", now, "문제가 발견됐습니다!!" +errcolor_none)
         
 if __name__ == "__main__":
     check("/var/log/messages", "FATAL")
