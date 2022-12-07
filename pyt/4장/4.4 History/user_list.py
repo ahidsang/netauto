@@ -6,7 +6,10 @@ from subprocess import *
 def exec_cmd(cmd):
     p = Popen(cmd, shell=True, stdout=PIPE)
     (ret, err) = p.communicate()
-    return ret
+    
+    retdecode= ret.decode('utf-8')
+    print(retdecode)
+    return retdecode
 
 def grep_login_defs(keyword) :
     # 사용자 계정 정보에서 필요한 값을 추출
@@ -27,4 +30,4 @@ def get_accounts() :
 if __name__ == "__main__":
     accounts = get_accounts()
     for account in accounts :
-        print account
+        print (account)
